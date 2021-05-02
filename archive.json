@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2021-04-24T00:00:50.216449+00:00",
+  "timestamp": "2021-05-02T01:08:19.458293+00:00",
   "repo": "pcapng/pcapng",
   "labels": [
     {
@@ -5185,7 +5185,7 @@
       "labels": [],
       "body": "Signed-off-by: Eelco Chaudron <echaudro@redhat.com>",
       "createdAt": "2020-04-09T08:32:21Z",
-      "updatedAt": "2020-06-03T15:05:44Z",
+      "updatedAt": "2021-04-29T07:33:42Z",
       "baseRepository": "pcapng/pcapng",
       "baseRefName": "master",
       "baseRefOid": "22bebb865b28b9421b5761ae4190ecea88738f7b",
@@ -5729,6 +5729,66 @@
               "body": "Will remove it!",
               "createdAt": "2020-05-01T07:58:41Z",
               "updatedAt": "2020-05-01T10:23:39Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NjQ3ODIyNTA5",
+          "commit": {
+            "abbreviatedOid": "b5b2c08"
+          },
+          "author": "guyharris",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2021-04-29T05:23:05Z",
+          "updatedAt": "2021-04-29T05:23:06Z",
+          "comments": [
+            {
+              "originalPosition": 65,
+              "body": "By the way, the Linux_eBPF_TC and Linux_eBPF_XDP verdict types appear to be integral values; if so, are they in the byte order of the host writing the file (so that a little-endian machine will write them as little-endian numbers and a big-endian machine will write them as big-endian numbers)?\r\n\r\nAnd is the hardware verdict type an opaque blob of bytes?",
+              "createdAt": "2021-04-29T05:23:05Z",
+              "updatedAt": "2021-04-29T05:23:06Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NjQ3ODI1MTI3",
+          "commit": {
+            "abbreviatedOid": "b5b2c08"
+          },
+          "author": "guyharris",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2021-04-29T05:31:04Z",
+          "updatedAt": "2021-04-29T05:31:04Z",
+          "comments": [
+            {
+              "originalPosition": 65,
+              "body": "(The byte order question also applies to the packet ID and queue options, with presumably the same answer.)",
+              "createdAt": "2021-04-29T05:31:04Z",
+              "updatedAt": "2021-04-29T05:31:04Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NjQ3ODkyMTYy",
+          "commit": {
+            "abbreviatedOid": "b5b2c08"
+          },
+          "author": "chaudron",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2021-04-29T07:33:42Z",
+          "updatedAt": "2021-04-29T07:33:42Z",
+          "comments": [
+            {
+              "originalPosition": 65,
+              "body": "The Linux_eBPF_TC and Linux_eBPF_XDP are stored a uint64 and hence the same as all other metadata in the block, so in host order as explained in the \"Endianness\" section. \r\n\r\nYou are right about the hardware verdict type, this is an opaque blob of bytes.\r\n\r\nPacket and queue ID are the same as any other option, for example, epb_dropcount, which are stored as explained in the \"Endianness\" section. \r\n\r\n",
+              "createdAt": "2021-04-29T07:33:42Z",
+              "updatedAt": "2021-04-29T07:33:42Z"
             }
           ]
         }
