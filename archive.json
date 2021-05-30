@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2021-05-02T01:08:19.458293+00:00",
+  "timestamp": "2021-05-30T02:12:56.995868+00:00",
   "repo": "pcapng/pcapng",
   "labels": [
     {
@@ -1750,6 +1750,22 @@
           "updatedAt": "2021-04-20T23:38:52Z"
         }
       ]
+    },
+    {
+      "number": 106,
+      "id": "MDU6SXNzdWU5MDM4MTE2ODM=",
+      "title": "pcap figure 1 --- Link Type",
+      "url": "https://github.com/pcapng/pcapng/issues/106",
+      "state": "OPEN",
+      "author": "mcr",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "\r\n> I think bytes 20 through 24 of the File Header (Fig 1) are incorrect.  Perhaps you meant to have the LinkType field come first, at least for a little-endian machine?\r\n\r\nThe upper 32 bits of what was originally a 32-bit link-layer type field were stolen for FCS information (and, originally, other purposes that NetBSD had, but it no longer seems to use them for that purpose).\r\n\r\nSo if you view that field as a 32-bit value, with the bit on the right being the least-significant bit, and the bit on the left being the most-significant bit, that figure is correct.\r\n\r\nI.e., it's correct after the field is converted to host byte order.  In the file, that's not the case.\r\n\r\nIt should probably be described as a 32-bit link-layer type plus additional information field, so people know that it has to be converted to host byte order as a 32-bit quantity, with the subfields described below that.\r\n",
+      "createdAt": "2021-05-27T14:05:46Z",
+      "updatedAt": "2021-05-27T14:05:46Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": [
