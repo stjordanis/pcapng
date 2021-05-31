@@ -21,7 +21,7 @@ it, and libpcap can currently read some pcapng files.
 <meta content="draft-tuexen-opsawg-pcapng-02" name="ietf.draft">
 <!-- Generator version information:
   xml2rfc 3.7.0
-    Python 3.8.8
+    Python 3.8.10
     appdirs 1.4.4
     ConfigArgParse 1.2.3
     google-i18n-address 2.4.0
@@ -89,11 +89,17 @@ body {
   color: var(--title-color);
 }
 #title {
-  padding: 1em 0 0.2em;
   font-size: 32px;
   line-height: 40px;
   clear: both;
 }
+#title, #rfcnum {
+  margin: 1.5em 0 0.2em;
+}
+#rfcnum + #title {
+  margin: 0.2em 0;
+}
+
 h1, h2, h3 {
   font-size: 22px;
   line-height: 27px;
@@ -844,11 +850,11 @@ address div.right {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">pcapng</td>
-<td class="right">April 2021</td>
+<td class="right">May 2021</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Tuexen, et al.</td>
-<td class="center">Expires 26 October 2021</td>
+<td class="center">Expires 2 December 2021</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -861,12 +867,12 @@ address div.right {
 <dd class="internet-draft">draft-tuexen-opsawg-pcapng-02</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2021-04-24" class="published">24 April 2021</time>
+<time datetime="2021-05-31" class="published">31 May 2021</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2021-10-26">26 October 2021</time></dd>
+<dd class="expires"><time datetime="2021-12-02">2 December 2021</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -937,7 +943,7 @@ it, and libpcap can currently read some pcapng files.<a href="#section-abstract-
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 26 October 2021.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 2 December 2021.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1998,8 +2004,8 @@ of the SHB and with the same lengths, must keep the value of the Block
 TYpe the same, must keep the two posssible values of the Byte-Order
 Magic the same, depending on the block's byte order, so that the rest of
 the SHB can be correctly interpreted.)<a href="#section-4.1-7" class="pilcrow">¶</a></p>
-<p id="section-4.1-8">The Minor Verson would be chagned only if a new version of this
-spacification, for a later minor version of the file format, were
+<p id="section-4.1-8">The Minor Version would be changed only if a new version of this
+specification, for a later minor version of the file format, were
 created.  Such a version would only be created if the format were to
 change in such a way that code that reads the new format could read the
 old format without checking the version number but code that reads the
@@ -3423,7 +3429,7 @@ Journal Export Format entry data.<a href="#section-4.7-1" class="pilcrow">¶</a>
 <p id="section-4.7-2">One of the primary components of the systemd System and
 Service Manager is the "Journal", a message logging system that
 uses arrays of key-value pairs. Journal entries are stored in a
-databse-like file on disk but can be serialized to easily
+database-like file on disk but can be serialized to easily
 parseable "Journal Export Format" data or to a JSON object. The
 block described here is limited to Journal Export Format data
 only.<a href="#section-4.7-2" class="pilcrow">¶</a></p>

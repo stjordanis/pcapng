@@ -5,7 +5,7 @@
 Network Working Group                                     M. Tuexen, Ed.
 Internet-Draft                          Muenster Univ. of Appl. Sciences
 Intended status: Informational                                  F. Risso
-Expires: 26 October 2021                           Politecnico di Torino
+Expires: 2 December 2021                           Politecnico di Torino
                                                              J. Bongertz
                                                  Airbus DS CyberSecurity
                                                                 G. Combs
@@ -16,7 +16,7 @@ Expires: 26 October 2021                           Politecnico di Torino
                                                                  Red Hat
                                                            M. Richardson
                                                                Sandelman
-                                                           24 April 2021
+                                                             31 May 2021
 
 
            PCAP Next Generation (pcapng) Capture File Format
@@ -54,7 +54,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 26 October 2021.
+   This Internet-Draft will expire on 2 December 2021.
 
 Copyright Notice
 
@@ -765,8 +765,8 @@ Table of Contents
    block's byte order, so that the rest of the SHB can be correctly
    interpreted.)
 
-   The Minor Verson would be chagned only if a new version of this
-   spacification, for a later minor version of the file format, were
+   The Minor Version would be changed only if a new version of this
+   specification, for a later minor version of the file format, were
    created.  Such a version would only be created if the format were to
    change in such a way that code that reads the new format could read
    the old format without checking the version number but code that
@@ -1752,7 +1752,7 @@ Table of Contents
 
    One of the primary components of the systemd System and Service
    Manager is the "Journal", a message logging system that uses arrays
-   of key-value pairs.  Journal entries are stored in a databse-like
+   of key-value pairs.  Journal entries are stored in a database-like
    file on disk but can be serialized to easily parseable "Journal
    Export Format" data or to a JSON object.  The block described here is
    limited to Journal Export Format data only.
